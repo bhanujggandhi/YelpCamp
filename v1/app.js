@@ -6,18 +6,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 var campgrounds = [
-	{
-		name: 'Salmon Creek',
-		image: 'https://australia.businessesforsale.com/australian/static/articleimage?articleId=12982&name=image2.jpg'
-	},
-	{
-		name: 'Granite Hill',
-		image: 'https://uk.businessesforsale.com/uk/static/articleimage?articleId=10065&name=image2.jpg'
-	},
-	{
-		name: "Mountain Goat's Rest",
-		image: 'https://thumbs.dreamstime.com/b/night-view-tent-near-mountain-lake-russia-hibiny-39339696.jpg'
-	}
+	{ name: 'Salmon Creek', image: 'https://farm9.staticflickr.com/8442/7962474612_bf2baf67c0.jpg' },
+	{ name: 'Granite Hill', image: 'https://farm1.staticflickr.com/60/215827008_6489cd30c3.jpg' },
+	{ name: "Mountain Goat's Rest", image: 'https://farm7.staticflickr.com/6057/6234565071_4d20668bbd.jpg' },
+	{ name: 'Salmon Creek', image: 'https://farm9.staticflickr.com/8442/7962474612_bf2baf67c0.jpg' },
+	{ name: 'Granite Hill', image: 'https://farm1.staticflickr.com/60/215827008_6489cd30c3.jpg' },
+	{ name: "Mountain Goat's Rest", image: 'https://farm7.staticflickr.com/6057/6234565071_4d20668bbd.jpg' },
+	{ name: 'Salmon Creek', image: 'https://farm9.staticflickr.com/8442/7962474612_bf2baf67c0.jpg' },
+	{ name: 'Granite Hill', image: 'https://farm1.staticflickr.com/60/215827008_6489cd30c3.jpg' },
+	{ name: "Mountain Goat's Rest", image: 'https://farm7.staticflickr.com/6057/6234565071_4d20668bbd.jpg' }
 ];
 
 app.get('/', function(req, res) {
