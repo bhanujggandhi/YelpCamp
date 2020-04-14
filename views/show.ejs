@@ -5,4 +5,12 @@
 
 <p><%= campground.description %> </p>
 
+<% for(var i = 0; i < campground.comments.length; i++){ %> 
+    <p>
+        <strong>
+            <%= campground.comments[i].author %> 
+        </strong> - 
+        <%= campground.comments[i].text %> 
+    </p>
+<% } %> 
 <%- include("partials/footer") %> 
