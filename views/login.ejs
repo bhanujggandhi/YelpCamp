@@ -1,9 +1,11 @@
 <%- include("partials/header") %>
 
-    <div class="row">
-        <div class="col-md-12">
+    <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
+            <h1>Sign In</h1>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-4">
             <form class="form-signin" action="/login" method="POST">
-            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <label for="inputUsername" class="sr-only">Username</label>
             <input type="text" id="inputUsername" class="form-control" name="username" placeholder="Username" required autofocus>
             <label for="inputPassword" class="sr-only">Password</label>
