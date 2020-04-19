@@ -1,28 +1,34 @@
 <%- include("../partials/header") %> 
 
     <header class="jumbotron">
-        <div class="jumbotron">
-            <h1>Welcome To YelpCamp!</h1>
+        <div class="container">
+            <h1><span class="glyphicon glyphicon-tent"></span> Welcome To YelpCamp!</h1>
             <p>View our hand-picked campgrounds from all over the world</p>
             <p>
-                <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Campground</a>
+            <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Campground</a>
+            </p>
+            <p>
+            <form action="/campgrounds" method="GET" class="form-inline" id="campground-search">
+            <div class="form-group">
+                <input type="text" name="search" placeholder="Campground search..." class="form-control">
+            </div>
+            </form>
             </p>
         </div>
     </header>
 
-    <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+    <div class="row text-center" d="campground-grid">
         <% for(var i = 0; i < campgrounds.length; i++){ %>
-            <div class="col-md-4 col-sm-6">
-                <div class="thumbnail">
-                    <img src="<%= campgrounds[i].image %> " alt="">
-                    <div class="caption">
-                        <h4><%= campgrounds[i].name %></h4>
-                    </div>
-                    <p>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="<%= campgrounds[i].image %>" alt="<%= campgrounds[i].name %>">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= campgrounds[i].name %></h5>
                         <a href="/campgrounds/<%= campgrounds[i]._id %>" class="btn btn-primary">More Info</a>
-                    </p>
+                    </div>
                 </div>
             </div>
         <% } %>
+    </div>
 
 <%- include("../partials/footer") %> 
