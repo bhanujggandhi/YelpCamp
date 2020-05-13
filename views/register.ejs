@@ -1,26 +1,41 @@
 <%- include("partials/header") %>
 
 <div class="row justify-content-center">
-    <div class="col-md-12 text-center">
-        <h1>Sign Up</h1>
-    </div>
-    <div class="col-xs-12 col-md-6 col-lg-4">
-        <form action="/register" method="post">
-            <div class="form-group">
-                <input class="form-control" type="text" name="username" placeholder="Username">
-            </div>
-            <div class="form-group">
-                <input class="form-control" type="password" name="password" placeholder="Password">
-            </div>
-            <div class="form-group">
-                <input class="form-control" type="text" name="adminCode" placeholder="Admin Code">
-            </div>
-            <div class="form-group">
-                <button class="btn btn-lg btn-primary btn-block">Sign Up!</button>
-            </div>
-        </form>
-        <a href="/campgrounds">Go Back</a>
-    </div>
+  <div class="col-md-12 text-center">
+    <h1>Sign Up</h1>
+  </div>
+  <div class="col-xs-12 col-md-6 col-lg-4">
+    <form action="/register" method="post">
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="text"
+          name="username"
+          placeholder="Username"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="password"
+          name="password"
+          placeholder="Password"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="text"
+          name="adminCode"
+          placeholder="Admin Code"
+        />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-lg btn-primary btn-block">Sign Up!</button>
+      </div>
+    </form>
+    <a href="/campgrounds">Go Back</a>
+  </div>
 </div>
 
 <%- include("partials/footer") %>
