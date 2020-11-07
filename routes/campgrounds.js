@@ -3,8 +3,6 @@ var router = express.Router();
 var Campground = require("../models/campground");
 var middleware = require("../middleware");
 
-var geocoder = NodeGeocoder(options);
-
 //INDEX - show all campgrounds
 router.get("/", function (req, res) {
   // Get all campgrounds from DB
@@ -42,7 +40,6 @@ router.post("/", middleware.isLoggedIn, function (req, res) {
       console.log(err);
     } else {
       //redirect back to campgrounds page
-      console.log(newlyCreated);
       res.redirect("/campgrounds");
     }
   });
@@ -62,7 +59,6 @@ router.get("/:id", function (req, res) {
       if (err) {
         console.log(err);
       } else {
-        console.log(foundCampground);
         //render show template with that campground
         res.render("campgrounds/show", { campground: foundCampground });
       }
